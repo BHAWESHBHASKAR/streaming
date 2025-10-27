@@ -233,12 +233,15 @@ def video_feed():
 
 if __name__ == "__main__":
     # Create templates directory if it doesn't exist
-    os.makedirs('templates', exist_ok=True)
+    try:
+        os.makedirs('templates', exist_ok=True)
+    except:
+        pass  # Ignore errors in production
     
     # Default video path
     default_video = "/Users/rishavkumarraman/Desktop/freelance/smartsecurity/video/showcase.mov"
     
-    # Create HTML template with file selector
+    # HTML content - will be served directly or from file
     html_content = '''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -784,8 +787,12 @@ if __name__ == "__main__":
 </body>
 </html>'''
     
-    with open('templates/index.html', 'w') as f:
-        f.write(html_content)
+    # Try to write template file (may fail in production)
+    try:
+        with open('templates/index.html', 'w') as f:
+            f.write(html_content)
+    except:
+        pass  # Ignore write errors in production environments
     
     # Get port from environment variable (for deployment) or use default
     port = int(os.environ.get('PORT', 8080))
