@@ -248,9 +248,6 @@ if __name__ == "__main__":
     except:
         pass  # Ignore errors in production
     
-    # Default video path
-    default_video = "/Users/rishavkumarraman/Desktop/freelance/smartsecurity/video/showcase.mov"
-    
     # HTML content - will be served directly or from file
     html_content = '''<!DOCTYPE html>
 <html lang="en">
@@ -813,7 +810,6 @@ if __name__ == "__main__":
         print("🚀 Smart Security Video Stream Server")
         print("="*70)
         print(f"📱 Open your browser: http://127.0.0.1:{port}")
-        print(f"📹 Demo video ready: {default_video}")
         print("="*70)
         print("Features:")
         print("  ✅ Play video files (MP4, MOV, AVI, etc.)")
