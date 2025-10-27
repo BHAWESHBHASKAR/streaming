@@ -1,0 +1,124 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+*.pyc
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Backup and test files
+*_backup.py
+detecciones_backup.py
+create_rtsp_stream.py
+rtsp_server.py
+simple_video_stream.py
+
+# Video files (testing)
+*.mov
+*.mp4
+*.avi
+*.mkv
+*.flv
+*.wmv
+*.webm
+video/
+videos/
+test_videos/
+
+# MediaMTX RTSP Server
+mediamtx
+mediamtx_*
+mediamtx.yml
+start_rtsp_server.sh
+*.sh
+
+# Models (add specific model files if needed)
+*.pt
+*.pth
+*.onnx
+*.h5
+models/
+weights/
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Documentation drafts
+NOTES.md
+TODO.md
+DRAFT_*.md
+
+# Flask
+instance/
+.webassets-cache
+
+# Test files
+test_*.py
+*_test.py
+tests/
+__tests__/
+
+# Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# macOS
+.AppleDouble
+.LSOverride
+Icon
+._*
