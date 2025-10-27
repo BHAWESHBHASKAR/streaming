@@ -6,8 +6,18 @@ Uses a file path instead of RTSP URL
 """
 
 import cv2
-import torch
-from ultralytics import YOLO
+try:
+    import torch
+    TORCH_AVAILABLE = True
+except ImportError:
+    TORCH_AVAILABLE = False
+    
+try:
+    from ultralytics import YOLO
+    YOLO_AVAILABLE = True
+except ImportError:
+    YOLO_AVAILABLE = False
+    
 import time
 import socket
 import struct
@@ -16,7 +26,7 @@ from flask import Flask, render_template, Response, request, jsonify
 from flask_cors import CORS
 import os
 
-device = "cuda" if torch.cuda.is_available() else "cpu"
+device = "cuda" if (TORCH_AVAILABLE and torch.cuda.is_available()) else "cpu"
 
 # Modelos
 model_arms = None
